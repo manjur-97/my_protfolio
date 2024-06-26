@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="{{ asset('/assets/frontend/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/frontend/css/color.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/frontend/css/responsive.css') }}">
+     <!-- Owl Carousel CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/2.3.4/assets/owl.carousel.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/2.3.4/assets/owl.theme.default.min.css">
 
     @stack('css')
 
@@ -93,10 +96,13 @@
       
     </div>
    
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/main.min.js"></script>
     <script src="js/script.js"></script>
-
+    @stack('script')
 </body>
 
 

@@ -17,6 +17,8 @@ return new class extends Migration
             $table->text('descreption');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('post_categories')->onDelete('cascade');
+            $table->unsignedBigInteger('protfolio_id');
+            $table->foreign('protfolio_id')->references('id')->on('post_categories');
 
             $table->timestamps();
         });

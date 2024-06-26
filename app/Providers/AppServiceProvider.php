@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Repositories\Interfaces\PostRepositoryInterface;
 use App\Repositories\Interfaces\ProfileRepositoryInterface;
 use App\Repositories\Interfaces\SocialMediaRepositoryInterface;
+use App\Repositories\PostRepository;
 use App\Repositories\ProfileRepository;
 use App\Repositories\SocialMediaRepository;
 use Illuminate\Support\Facades\View;
@@ -18,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(ProfileRepositoryInterface::class, ProfileRepository::class);
         $this->app->bind(SocialMediaRepositoryInterface::class, SocialMediaRepository::class);
+        $this->app->bind(PostRepositoryInterface::class, PostRepository::class);
     }
 
     /**

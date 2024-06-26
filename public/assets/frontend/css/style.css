@@ -4357,7 +4357,7 @@ canvas {
 
 .linked-image {
     display: inline-block;
-    width: 30%;
+    width: 100%;
     vertical-align: top;
     float: none;
     margin-bottom: 15px

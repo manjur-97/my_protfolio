@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Profile extends Model
+class File extends Model
 {
     use HasFactory;
 
-    public function posts()
+    public function post()
     {
-        return $this->hasMany(Post::class, 'profile_id');
+        return $this->belongsTo(Post::class, 'post_id');
     }
 }
