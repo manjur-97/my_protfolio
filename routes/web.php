@@ -18,6 +18,13 @@ use Inertia\Inertia;
 */
 
 Route::get('/', [WebsiteController::class, 'home']);
+Route::get('/about/manjur-rahman-software-developer', [WebsiteController::class, 'about']);
+Route::get('/exprence/manjur-rahman-software-developer', [WebsiteController::class, 'exprence']);
+Route::get('/skill/manjur-rahman-software-developer', [WebsiteController::class, 'skill']);
+Route::get('/project/manjur-rahman-software-developer', [WebsiteController::class, 'project']);
+Route::get('/blog/manjur-rahman-software-developer', [WebsiteController::class, 'blog']);
+Route::get('/blog/{slog}', [WebsiteController::class, 'blog_details']);
+Route::get('/courses', [WebsiteController::class, 'courses']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

@@ -12,9 +12,9 @@ class PostRepository implements PostRepositoryInterface
         return Post::with(['category', 'profile', 'files'])->get();
     }
 
-    public function find($id)
+    public function find($slog)
     {
-        return Post::find($id);
+        return Post::where("slog",$slog)->first();
     }
 
     public function create(array $data)
@@ -43,4 +43,14 @@ class PostRepository implements PostRepositoryInterface
         }
         return false;
     }
+
+    public function views_count($id)
+    {
+        $post = Post::find($id);
+        
+        $post->views= ++$post->views;
+        return  $post->save();
+       
+    }
+
 }
